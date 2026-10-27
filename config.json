@@ -1,0 +1,29 @@
+{
+  "data_dir": "data",
+  "tz_normalize_to": "+05:30",
+  "cleaning": {
+    "drop_unparseable_arrival": true,
+    "drop_negative_elapsed": true
+  },
+  "schedule": {
+    "mode": "all_week",
+    "route_overrides": {},
+    "skip_v2_notes": ["no change"]
+  },
+  "verdict": {
+    "metric": "wd_median",
+    "late_threshold_min": 4.0,
+    "tie_breakers": ["pct_over_5m", "p90"]
+  },
+  "ranking": {
+    "worst_n": 3
+  },
+  "ops_log_categories": {
+    "weather_diversion": ["waterlogged", "diverted", "rain", "flood"],
+    "crowd_event": ["crowd", "festival", "surge"],
+    "vehicle": ["yard swap", "swapped vehicle", "breakdown"],
+    "rider_complaint": ["complaint"],
+    "staffing": ["no-show", "driver swap"],
+    "normal": ["all normal", "normal"]
+  }
+}
